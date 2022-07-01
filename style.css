@@ -1,0 +1,432 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+
+}
+html
+{
+    background: #000;
+}
+body 
+{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+}
+div img
+{
+    position: absolute;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+div img.active
+{
+    opacity: 1;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transition: 0.6s;
+    padding: 60px 6vw;
+    z-index: 100;
+}
+header ul
+{
+    position: relative;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    position: relative;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header ul li a:hover
+{
+    color: #000;
+    background: #fff;
+}
+
+
+header.sticky
+{
+    padding: 20px 6vw;
+    background: rgb(62, 62, 62);
+}
+header.sticky .logo
+{
+    color: #fff;
+}
+header.sticky ul li a 
+{
+    color: #fff;
+}
+header.sticky ul li a:hover 
+{
+    background: #fff;
+    color: #000;
+}
+
+section
+{
+    background: #000;
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+section .reveal
+{
+    color: #fff;
+    font-size: 3.5em;
+    letter-spacing: 3px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+
+}
+section .reveal:nth-child(2)
+{
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 0;
+    margin-top: 5px;
+}
+section .reveal.active
+{
+   transform: scaleX(1);
+   transition-delay: 0s;
+
+}
+section .reveal:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    transform-origin: right;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+section .reveal:nth-child(2):before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: green;
+    transform-origin: right;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+section .reveal:nth-child(2).active:before,
+section .reveal.active:before
+{
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+.Anasayfa
+{
+    position: relative;
+    background: rgb(66, 66, 66) url(resimler/laptop2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.anasayfa
+{
+    padding: 0 6vw;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    top: 225px;
+    height: 50vh;
+    width: 100%;
+}
+.anasayfaIcerik .imgBox
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.education .imgBox
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.education
+{
+    padding: 0 6vw;
+    top: 250px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+.items
+{
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    transition: 0.5s;
+}
+.Egitim
+{
+    position: relative;
+    background: rgb(143, 143, 143) url(resimler/okulFotolar/okul1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.hakkimda
+{
+    position: relative;
+    background: rgb(83, 83, 83) url(resimler/klavye.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+b
+{
+    letter-spacing: 1.5px;
+    font-size: 3em;
+}
+c
+{
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+.container
+{
+    margin: 10px 30px;
+    padding: 5px 15px;
+    position: relative;
+    display: flex;
+    justify-content:center;
+}
+.container .card
+{
+    width: 300px;
+    height: 300px;
+}
+
+.container .card .face
+{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.container .card .face.face1
+{
+    background: rgb(7, 7, 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform-origin: bottom;
+    border-radius: 10px;
+    height: 300px;
+}
+.container .card .face.face1 img
+{
+    width: 85%;
+}
+
+.container .card:hover .face.face1
+{
+    border-radius: 10px;
+    transform: translateY(-100%) rotateX(90deg);
+    background: #ff0057 ;
+}
+
+.container .card .face.face2
+{
+    height: 300px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+}
+.container .card:hover .face.face2
+{
+    border-radius: 10px;
+    transform: translateY(0) rotateX(0deg);
+}
+.Iletisim
+{
+    position: relative;
+    background: rgb(77, 77, 77) url(resimler/son.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.iletisim
+{
+    padding: 0 6vw;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    top: 225px;
+    height: 50vh;
+    width: 100%;
+}
+.iletisim .imgBox
+{
+    transform: translateY(100px);
+    width: 10%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+::-webkit-scrollbar
+{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: rgb(81, 81, 81);
+    border-radius: 10px;
+    transition: 0.4s;
+
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background:rgb(25, 25, 25) ;
+}
+
+@media(max-width:496px)
+{
+    .iletisim h2.small
+    {
+        letter-spacing: normal;
+        font-size: 1.150rem;
+    }
+    .iletisim h2.middle
+    {
+        letter-spacing: normal;
+        font-size: 2.5em;
+    }
+}
+
+@media(max-width:600px)
+{
+    header ul
+    {
+        display: none;
+    }
+    header ul.active 
+    {
+        display: grid;
+        height: 100%;
+        width: 100%;
+    }
+    header.active
+    {
+        z-index: 101;
+        background: #fff;
+        height: 100%;
+    }
+    
+    header.active .menu-toggle
+    {
+        transform: translateY(-330px);
+    }
+    header.active ul li a
+    {
+        font-size: 2em;
+        font-family: sans-serif;
+        text-align: center;
+        color: #000;
+    }
+    
+    header.active ul li a:hover
+    {
+        background: #000;
+        color: #fff;
+    }
+    header ul.active li
+    {
+        width: 100%;
+    }
+    .menu-toggle
+    {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        background: rgb(62, 62, 62);
+        text-align: center;
+        font-size: 30px;
+        color: #fff;
+        
+    }
+    .menu-toggle:before
+    {
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    .menu-toggle.active:before
+    {
+        content: '\f00d';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }  
+}
